@@ -8,7 +8,6 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.lang.reflect.GenericArrayType;
 
 @Entity
 @Table(name = "CUSTOMER")
@@ -17,7 +16,7 @@ import java.lang.reflect.GenericArrayType;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@NamedQuery(name = "find_all_customers",query = "Select c from Customer c")
+@NamedQuery(name = "find_all_customers", query = "Select c from Customer c")
 public class Customer implements Serializable {
 
     @Id

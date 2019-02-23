@@ -19,12 +19,12 @@ public class RestController {
     }
 
     @GetMapping("/customers")
-    public List<Customer> findAllCustomers(){
+    public List<Customer> findAllCustomers() {
         return customerRepository.findAll();
     }
 
     @GetMapping("/customers/{customerId}")
-    public Customer getCustomerById(@PathVariable Long customerId){
+    public Customer getCustomerById(@PathVariable Long customerId) {
         return customerRepository.findById(customerId);
     }
 }

@@ -31,7 +31,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     @Override
     public Customer findById(Long customerId) {
         Session session = entityManager.unwrap(Session.class);
-        Query query = session.createQuery("from Customer where customerId=:customerId").setHint(cacheQueryPackage,true);
+        Query query = session.createQuery("from Customer where customerId=:customerId").setHint(cacheQueryPackage, true);
         query.setParameter("customerId", customerId);
         Customer customer = (Customer) query.getSingleResult();
         return customer;
